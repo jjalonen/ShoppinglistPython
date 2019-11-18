@@ -6,6 +6,9 @@ import getpass  # getpass hides the password promt so it doesnt show it when you
 
 def shoplist():
 
+        shoppinglist_file = open("shoppinglist.txt", "a")
+        shoppinglist_file.close()
+
         # Quitshop exits the program when turned true (when pressing option 9)
         quitshop = False
 
@@ -56,7 +59,7 @@ def shoplist():
                 # Add response for username password and store info locally
                 SMTP_SERVER = "smtp.gmail.com"
                 SMTP_PORT = 587
-                usr = "user gmail address here"
+                usr = "USEREMAIL"
 
                 # Connecting to SMTP server, gmail always requires port 587 to be used
                 def passwordcheck(usr,psw):
@@ -81,8 +84,8 @@ def shoplist():
                         break
 
                 # Fill out To/From/Subject fields
-                EMAIL_TO = "receiver email address here"
-                EMAIL_FROM = "sender email address here"
+                EMAIL_TO = "RECEIVEREMAIL"
+                EMAIL_FROM = "SENDEREMAIL"
                 EMAIL_SUBJECT = "Ostoslista"
 
                 # Date format to use in email subject-line
